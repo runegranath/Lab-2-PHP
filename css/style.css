@@ -1,0 +1,39 @@
+.site-header {
+    background-color: #f4f5f6;
+    border-bottom: 1px solid #d1d1d1;
+    padding: 1.5rem 0;
+    margin-bottom: 3rem;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main-nav .logo {
+    font-size: 2rem;
+    color: #9b4dca;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0;
+}
+
+.site-footer {
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #606c76;
+}

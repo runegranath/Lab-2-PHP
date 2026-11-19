@@ -1,19 +1,18 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Milligram CSS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
-    <script src="js/main.js" defer></script>
-    <title>Titel</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Lab 2 PHP</h1>
-    </div>
-</body>
-</html>
+<?php
+$page_title = "Start";
+include("includes/header.php");
+?>
+
+<h1>Välkommen till Lab 2</h1>
+
+<section>
+    <h2>Om uppgiften</h2>
+    <p></p>
+</section>
+
+<section>
+    <h2>Mina reflektioner om PHP</h2>
+    <p></p>
+</section>
+
+<?php include("includes/footer.php"); ?>
