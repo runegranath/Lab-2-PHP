@@ -15,7 +15,8 @@ include("includes/header.php");
 <section>
     <h2>Slutsatser</h2>
     <p>AI verkar vara ett kraftfullt verktyg som en modern utvecklare kan använda för att öka sin produktivitet.
-        Särskilt vid felsökning och fördjupning av vissa koncept där AI kan ge förklaringar och exempel.
+        Särskilt vid felsökning och fördjupning av vissa koncept där AI kan ge förklaringar och exempel. Även vid saker
+        de flesta personer ser som tråkiga och repetitiva kan AI vara ett bra verktyg för att snabbt generera ett t.ex. Excel-ark eller sammanställa ett UML-diagram.
         Men min åsikt är ändå att det egentligen bara är en vidareutvecklad sökmotor i grunden vilket kan vara lätt att glömma. Men
         för just programmering och kodning känns det som att AI är i sitt esse genom närheten till sina stora bibliotek av dokumentation och exempel som
         redan finns som referens.
