@@ -1,12 +1,16 @@
 <?php
-$page_title = "Bucketlist";
-include("includes/header.php");
+include_once("includes/config.php");
 
 $bucketlist = new BucketList();
 
 // Variabler för feedback/felmeddelanden 
 $message = "";
 $error = "";
+
+// Kontrollera om en ny punkt har lagts till via GET-parametern
+if (isset($_GET['added'])) {
+    $message = "Ny punkt har lagts till!";
+}
 
 // Radering
 if (isset($_GET['delete'])) {
@@ -19,20 +23,24 @@ if (isset($_GET['delete'])) {
     }
 }
 
-// formulärinmatning
+// formulärinmatning (PRG - Post/Redirect/Get)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'] ?? "";
     $description = $_POST['description'] ?? "";
     $priority = intval($_POST['priority'] ?? 0);
 
     if ($bucketlist->addItem($name, $description, $priority)) {
-        $message = "Ny punkt har lagts till!";
+        header("Location: bucketlist.php?added=1");
+        exit;
     } else {
         $error = "Alla fält måste fyllas i korrekt (inga tomma värden tillåts).";
     }
 }
 
 $items = $bucketlist->getItems();
+
+$page_title = "Bucketlist";
+include("includes/header.php");
 ?>
 
 <h1>Min Bucketlist</h1>
@@ -94,10 +102,10 @@ $items = $bucketlist->getItems();
                         <td><?= htmlspecialchars($item['description']); ?></td>
                         <td><?= htmlspecialchars($item['created_at']); ?></td>
                         <td>
-                            <a href="bucketlist.php?delete=<?= $item['id']; ?>" 
-                               class="button button-outline"
-                               onclick="return confirm('Är du säker på att du vill radera denna punkt?');">
-                               Radera
+                            <a href="bucketlist.php?delete=<?= $item['id']; ?>"
+                                class="button button-outline"
+                                onclick="return confirm('Är du säker på att du vill radera denna punkt?');">
+                                Radera
                             </a>
                         </td>
                     </tr>
